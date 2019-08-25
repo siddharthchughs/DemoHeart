@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    tools:context=".DemoSlidingActivity">
+
+
+    <ImageView
+        android:id="@+id/img_walking"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:src="@drawable/img_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_brain"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/img_border"
+        app:layout_constraintBaseline_toBaselineOf="@id/img_walking"
+        app:layout_constraintEnd_toStartOf="@id/img_heart"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_heart"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/img_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/img_heart"
+        app:popupTheme="@style/AppTheme.NoActionBar" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_tab"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Theme.Zhaw.TabLayout"
+        app:layout_constraintTop_toBottomOf="@id/img_heart"
+        app:tabGravity="center"
+        app:tabIndicatorFullWidth="false"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabPaddingEnd="25dp"
+        app:tabPaddingStart="25dp"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout1" />
+    <!--<com.bpk.mydemopoc.CustomViewPager-->
+        <!--android:id="@+id/pager1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:minHeight="?attr/actionBarSize"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tab_layout1" />-->
+
+
+</android.support.constraint.ConstraintLayout>

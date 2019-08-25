@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VibratonActivity">
+
+
+    <Button
+        android:id="@+id/btn_Vibrate"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:text="Click for the vibration"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

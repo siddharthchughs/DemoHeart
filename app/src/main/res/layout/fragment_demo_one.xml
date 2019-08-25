@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:background="@android:color/white">
+
+    <!--<android.support.design.widget.CoordinatorLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/white"-->
+        <!---->
+        <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--xmlns:tools="http://schemas.android.com/tools"-->
+       <!--android:layout_gravity="center"-->
+        <!--tools:context=".DemoFragment">-->
+        <!-- TODO: Update blank fragment layout -->
+        <android.support.constraint.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+
+    >
+
+
+            <View
+                android:id="@+id/cardViewBpm"
+                android:layout_width="300dp"
+                android:layout_height="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/red_500"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/segmentedlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:paddingTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/cardViewBpm"
+                >
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_btstate"
+                    android:stateListAnimator="@null"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/hourtab"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.141"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardViewBpm"
+                    />
+
+                <Button
+                    android:id="@+id/btn_Daily"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_btstatewhite"
+                    android:stateListAnimator="@null"
+                    android:text="@string/days"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/button1"
+                    app:layout_constraintStart_toEndOf="@+id/button1" />
+
+                <Button
+                    android:id="@+id/btn_Weekly"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_btstatewhite"
+                    android:stateListAnimator="@null"
+                    android:text="Week"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                    android:textSize="12sp"
+                    app:layout_constraintHorizontal_bias="0.51"
+                    app:layout_constraintBaseline_toBaselineOf="@id/button1"
+                    app:layout_constraintStart_toEndOf="@+id/btn_Daily"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_Monthly"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_btstatewhite"
+                    android:stateListAnimator="@null"
+                    android:text="Month"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                    android:textSize="12sp"
+                    app:layout_constraintBaseline_toBaselineOf="@id/btn_Weekly"
+                    app:layout_constraintStart_toEndOf="@+id/btn_Weekly"
+                    app:layout_constraintTop_toBottomOf="@id/cardViewBpm" />
+
+
+            </LinearLayout>
+
+
+
+            <!--<android.support.constraint.ConstraintLayout-->
+                <!--android:id="@+id/cardview_date_data"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--app:layout_constraintEnd_toStartOf="@id/segmented"-->
+                <!--app:layout_constraintHorizontal_bias="0.496"-->
+                <!--app:layout_constraintStart_toStartOf="@id/segmented"-->
+                <!--app:layout_constraintTop_toBottomOf="@id/segmented">-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/img_Previous"&ndash;&gt;-->
+                    <!--&lt;!&ndash;style="@style/Widget.AppCompat.Button.Borderless.Colored"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:src="@drawable/left_icon"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:backgroundTint="@color/red_500"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<android.support.v7.widget.RecyclerView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/recyclerview"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="200dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="52dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/img_Next"&ndash;&gt;-->
+                    <!--&lt;!&ndash;style="@style/Widget.AppCompat.Button.Borderless.Colored"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:src="@drawable/right_icon"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+            <!--</android.support.constraint.ConstraintLayout>-->
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:isScrollContainer="true"-->
+        <!--android:scrollbars="vertical"-->
+        <!--app:layout_constraintEnd_toEndOf="@id/cardview_date_data"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toStartOf="@id/cardview_date_data"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/cardview_date_data">-->
+
+            <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:id="@+id/cardview_date_data"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--app:layout_constraintEnd_toStartOf="@id/segmentedlayout"-->
+            <!--app:layout_constraintHorizontal_bias="0.496"-->
+            <!--app:layout_constraintStart_toStartOf="@id/segmentedlayout"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/segmentedlayout">-->
+
+            <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/segmentedlayout"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="@id/segmentedlayout"
+                app:layout_constraintTop_toBottomOf="@id/segmentedlayout">
+
+        </FrameLayout>
+            <!--</android.support.constraint.ConstraintLayout>-->
+    <!--</ScrollView>-->
+
+
+
+            <!--
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/cardViewuser"
+                app:popupTheme="@style/AppTheme.NoActionBar"/>
+    -->
+
+            <!--
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/Theme.Zhaw.TabLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabGravity="fill"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"/>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_constraintTop_toBottomOf="@id/tab_layout1"/>
+
+    -->
+
+
+        </android.support.constraint.ConstraintLayout>
+    <!--</android.support.design.widget.CoordinatorLayout>-->
+<!--</ScrollView>-->
+</ScrollView>

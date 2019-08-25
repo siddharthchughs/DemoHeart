@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<View-->
+        <!--android:id="@+id/view_support"-->
+        <!--android:layout_width="330dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/red_500"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--/>-->
+
+        <!--<android.support.constraint.Barrier-->
+        <!--android:id="@+id/barrier"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:barrierDirection="top"-->
+        <!---->
+        <!--/>-->
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="100dp" />
+
+        <LinearLayout
+            android:id="@+id/segmentedlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_segmentation"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <Button
+                android:id="@+id/btn_Weekly"
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_hrrstate"
+                android:stateListAnimator="@null"
+                android:text="W"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/button1"
+                app:layout_constraintStart_toEndOf="@+id/btn_Daily"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_Monthly"
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_hrrmstate"
+                android:stateListAnimator="@null"
+                android:text="M"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/btn_Weekly"
+                app:layout_constraintStart_toEndOf="@+id/btn_Weekly"
+                app:layout_constraintTop_toBottomOf="@id/cardViewBpm" />
+
+            <Button
+                android:id="@+id/btn_Year"
+                android:layout_width="80dp"
+                android:layout_height="28dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/bg_hrrystate"
+                android:stateListAnimator="@null"
+                android:text="Y"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                android:textSize="12sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/button1"
+                app:layout_constraintStart_toEndOf="@+id/button1" />
+
+
+        </LinearLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_Change_Selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/segmentedlayout">
+
+            <ImageView
+                android:id="@+id/img_Previous"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/left_icon"
+                android:backgroundTint="@color/red_500"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="200dp"
+                android:layout_height="52dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_Next"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/right_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <com.github.mikephil.charting.charts.CandleStickChart
+            android:id="@+id/chart1"
+            android:layout_width="330dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_Change_Selection"
+            android:layout_marginBottom="10dp"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

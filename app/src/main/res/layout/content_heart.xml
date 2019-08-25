@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HeartActivity"
+    android:id="@+id/container"
+    tools:showIn="@layout/activity_heart">
+<!--
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tab_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+/>
+-->
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        app:pstsShouldExpand="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#000000"
+        app:pstsDividerColor="@color/red_500"
+        app:pstsIndicatorColor="@color/colorPrimaryDark"
+        app:pstsUnderlineColor="@color/colorPrimary"
+        app:pstsTabPaddingLeftRight="14dp">
+    </com.astuetz.PagerSlidingTabStrip>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
